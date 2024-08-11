@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}title{% endblock %} - flask survey</title>
+</head>
+<body>
+  {% for msg in get_flashed_messages() %}
+    <p>{{ msg }}</p>
+  {% endfor %}
+  <div id="content">{% block content %}content{% endblock %}</div>
+</body>
+</html>
